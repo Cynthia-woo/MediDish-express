@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 //use vercel api
-app.use("/", product);
+app.use("/api/product", product);
 
 
 
