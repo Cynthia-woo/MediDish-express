@@ -1,8 +1,6 @@
 //import express.js
 const express = require('express');
 
-//import vercel api
-// const product = require('./api/product');
 
 //provides utilities for working with file and directory paths
 const path = require("path");
@@ -22,14 +20,9 @@ const PORT = process.env.PORT || 5050;
 
 app.use(express.static('public'));
 
-//use vercel api
-// app.use("/", product);
-
 app.get('/', (req, res) => {
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 })
-
-
 
 
 // Handle the API request
