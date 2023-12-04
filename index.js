@@ -8,6 +8,9 @@ const path = require("path");
 //define express app
 const app = express();
 
+const cors = require('cors');
+app.use(cors());
+
 //import body-parser to parse json
 const bodyParser = require('body-parser'); // Add this line to parse JSON
 //import axios: a popular HTTP client to make requests
