@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5050;
 
 //use vercel api
-app.use("/api/product", product);
+app.use("/", product);
 
 //listen the reaction of the port
 app.listen(PORT, () => console.log(`Server is running in port http://localhost:${PORT}`))
