@@ -28,15 +28,13 @@ app.get('/', (req, res) => {
 })
 
 
-// Handle the API request
+//Handle the API request
 app.post("/api", async (req, res) => {
     try {
         const inputText = req.body.inputText;
         const user_id = req.body.user_id; // Optional user_id
         const session_id = req.body.session_id; // Optional session_id
         const stateful = req.body.stateful; // Optional stateful flag
-
-        console.log('app/js-handler');
 
         const apiResponse = await callZeroWidthAPI(inputText, user_id, session_id, stateful);
 
@@ -53,7 +51,7 @@ app.post("/api", async (req, res) => {
     }
 });
 
-// Function to make the API call
+// Function to make the API call - Server
 async function callZeroWidthAPI(inputText, user_id, session_id, stateful) {
     const apiUrl = "https://api.zerowidth.ai/process/NFkuStb1R0pe33kgs3IW/nFDVr95RfczyBCTiiOcu";
     const apiKey = "Bearer sk0w-8801efb57d18337bd57e8866f208052d";
