@@ -30,9 +30,9 @@
 
 <!--main container-->
 <div class="main_container">
-<!--req and res container-->
+    <!--req and res container-->
     <div class="left_container">
-<!--        response container, with input from users and output from Zerowidth-->
+        <!--        response container, with input from users and output from ZeroWidth-->
         <div class="response_container">
             <!--    <div id="loading-label" style="display: none"><img-->
             <!--            src="https://npr.brightspotcdn.com/legacy/sites/nhpr/files/202010/InternetSlowdown_Day.gif"-->
@@ -40,19 +40,38 @@
             <!--Medibot figure-->
             <div class="server_output_animation">
                 <img src="ui_img/backdrop.png" alt="star" class="animated-image5">
-                <img src="ui_img/greeting.png" width="100px" height="51px" alt="greeting" class="animated-image4">
+                <!--                <img src="ui_img/greeting.png" width="100px" height="51px" alt="greeting" class="animated-image4">-->
+                <div id="greeting" class="animated-image4">Hi there!</div>
+                <div class="top_item_container" id="item_container">
+                    <div class="top_item_description" id="item_description">
+                        <div class="top_item_name" id="item_name">Rice Porridge</div>
+                        <ul id="item_compositions">
+                            <li class="top_item_composition">50 grams of glutinous rice</li>
+                            <li class="top_item_composition">Tonifies kidneys</li>
+                        </ul>
+                    </div>
+                    <div class="top_item_img">
+                        <img src="https://i.ibb.co/jGmXc7C/Frame-1.png" alt="top_item_img" id="item_img">
+                    </div>
+                </div>
                 <img src="ui_img/bot.png" alt="Bot" class="animated-image" id="botImage">
-                <img src="ui_img/wave.png" alt="Wave" class="animated-image2">
+                <img src="ui_img/Ellipse 18.png" alt="Bot" class="loading-image" id="loadingImage"
+                     style="display: none">
+                <img src="ui_img/wave.png" alt="Wave" class="animated-image2" id="waveImage"
+                     style="display: inline-block">
                 <img src="ui_img/star.png" alt="star" class="animated-image3">
             </div>
             <!--response container-->
             <div id="response_content">
-                <div class='server_output'>
+                <div class='server_output animated'>
                     <div class="server_output_content">Welcome to "MediDish", your personalized Chinese Medicinal
                         Diet Master! I am here to assist you in creating nutritious and tailored medicinal recipes based
                         on your individual needs. Whether you're looking for a single meal recommendation, a daily meal
                         plan, or even a weekly culinary guide, I'm ready to provide you with a variety of medicinal diet
                         options.
+                    </div>
+                    <div class="server_output_icon">
+                        <img src="ui_img/Group%2023.png" alt="server_output_icon">
                     </div>
                 </div>
             </div>
@@ -63,11 +82,15 @@
             <button id="userInput_button" type="submit" onclick="callAPI()"></button>
         </div>
     </div>
-<!--    recommendations container-->
+    <!--    recommendations container-->
     <div class="right_container">
         <div class="list-container" id="listContainer">
-            <h2 class="list-title">Recommendations</h2>
-            <!-- 列表条目 -->
+            <div class="list-header">
+                <h2 class="list-title">Recommendations</h2>
+                <!-- Refresh Button -->
+                <button id="refreshRecMenu"></button>
+            </div>
+            <!-- list menu -->
             <div class="list-item expandable expand">
                 <div class="original-text item-icon1">Chrysanthemum Tea</div>
                 <div class="item-content">
@@ -94,6 +117,7 @@
 <script src="expandContainer.js"></script>
 <!--<script src="../index.js"></script>-->
 <script src="apiCall.js"></script>
+<script src="recipeGalleryRandomizer.js"></script>
 
 </body>
 
